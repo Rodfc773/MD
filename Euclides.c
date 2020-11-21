@@ -36,7 +36,7 @@ int main()
 
         scanf("%d %d", &a, &d);
 
-        printf("Fazendo os calulos, Aguarde.............\n\n");
+        printf("Fazendo os calculos, Aguarde.............\n\n");
         int valor = MDC(a, d);
 
         printf(" ---> MDC(%d,%d) = %d\n\n",a,d, valor);
