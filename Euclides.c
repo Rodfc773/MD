@@ -11,13 +11,13 @@ int MDC(int a , int d)
 
     if (r == 0)
     {
-        printf("%d = %d * %d  + %d <--> %d = %d - %d * %d\n", a, d, q, r, r, a, d, q);
+        printf(" ---> %d = %d * %d  + %d <--> %d = %d - %d * %d\n", a, d, q, r, r, a, d, q);
 
         return d; 
     }
     else
     {
-        printf("%d = %d * %d  + %d <--> %d = %d - %d * %d\n", a, d, q, r, r, a, d, q);
+        printf(" ---> %d = %d * %d  + %d <--> %d = %d - %d * %d\n", a, d, q, r, r, a, d, q);
         a = d;
         d = r;
 
@@ -27,19 +27,37 @@ int MDC(int a , int d)
 }
 int main()
 {
-    int numero = 1;;
 
-    while (numero != 0)
+    while (1)
     {
         int a, d;
 
+        printf("\nInforme 2 numeros inteiros\n\n");
+
         scanf("%d %d", &a, &d);
 
+        printf("Fazendo os calulos, Aguarde.............\n\n");
         int valor = MDC(a, d);
 
-        printf("MDC(a,d) = %d\n", valor);
+        printf(" ---> MDC(%d,%d) = %d\n\n",a,d, valor);
 
-        scanf("%d", &numero);
+        printf("-----------------------------------------------------------------\n\n");
+
+        char opcao[9];
+
+        printf("Deseja continuar?\n\n");
+
+        scanf(" %s", opcao);
+
+        if( (strcmp(opcao,"Sim") == 0 || strcmp(opcao,"SIM") == 0) || (strcmp(opcao,"S") == 0 || strcmp(opcao,"sim") == 0) || strcmp(opcao, "s") == 0 )
+        {
+            continue;
+        }
+        else
+        {
+            break;
+        }
+        
     }
     return 0;
 }
