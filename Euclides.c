@@ -45,7 +45,7 @@ int main()
 
         char opcao[9];
 
-        printf("Deseja continuar?\n\n");
+        printf("Deseja continuar?\n");
 
         scanf(" %s", opcao);
 
