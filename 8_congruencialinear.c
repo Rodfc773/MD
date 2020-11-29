@@ -89,7 +89,6 @@ int main()
         b = b/mdc;
         m = m/mdc;
 
-        printf("--> %ld\n--> %ld\n--> %ld\n",a,b,m);
         int a1, m1;
         int tamanho = linhas(a, m, 0);
         int matriz[tamanho][2];
@@ -118,23 +117,6 @@ int main()
             
         }
         calculo(tamanho - 2, tamanho, matriz, 0);
-
-        for (int j = 0; j < tamanho; j++)
-        {
-            for (int k = 0; k < 2; k++)
-            {
-                if(k + 1 == 2)
-                {
-                    printf("%d\n", matriz[j][k]);
-                }
-                else
-                {
-                     printf("%d ", matriz[j][k]);
-                }
-                
-            }
-            
-        }
         
         int s = matriz[1][1];
 
@@ -191,7 +173,6 @@ int main()
                 }     
             }
             
-
             printf("Podendo ser reescrita como %d + %d * k, com k ∈ ℤ", x, m1);
         }
         
